@@ -10,7 +10,7 @@ namespace Ex31_hint
         public Caw(string name, float hp, float power) : base(name, hp, power) { }
         public override void Attack(Character destination)
         {
-            if (hp > 5)
+            if (hp >= 5)
             {
                 bullet--;
                 Console.WriteLine($"{this.name}は{destination.name}を角で突く！");
