@@ -6,16 +6,16 @@ namespace Ex31_hint
     {
         static void Main(string[] args)
         {
-            Character character1 = new Character("しむら人", 500, 2);
-            Character character2 = new Character("ささっき", 1000, 25);
-            Tank tank1 = new Tank("Tiger", 500000, 250);
-            tank1.bullet = 10;
-            Tank tank2 = new Tank("がんタンク", 10000, 125);
-            tank2.bullet = 5;
-            Character[] characters = { character1, character2, tank1, tank2 };
+            Character character = new Character("すべてを受け止める男", 9999, 128);
+            Cat cat = new Cat("果てしなく強い猫", 16000, 1240);
+            Caw caw = new Caw("止まることを知らない牛", 25000, 2080);
+            Tank tank = new Tank("YMT-05　ヒルドルブ", 250000, 2580);
+            Hornet hornet = new Hornet("ハチくん", 500, 250);
+            tank.bullet = 10;
+            Character[] characters = { character, tank, cat, caw, hornet};
             for(var i = 1; i < characters.Length; i++)
             {
-                characters[i].Attack(character1);
+                characters[i].Attack(character);
             }
         }
     }

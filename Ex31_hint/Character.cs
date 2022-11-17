@@ -9,11 +9,13 @@ namespace Ex31_hint
         readonly public string name;
         public float hp;
         protected float power;
+        public bool poisonResistance;
         public Character(string name,float hp,float power)
         {
             this.name = name;
             this.hp = hp;
             this.power = power;
+            this.poisonResistance = false;
         }
         public virtual void Attack(Character destination)
         {
@@ -21,6 +23,6 @@ namespace Ex31_hint
             Console.WriteLine($"{destination.name}は{this.power}のダメージ");
             destination.hp -= this.power;
             Console.WriteLine($"{destination.name}の残りのHPは{destination.hp}");
-        }
+        }      
     }
 }

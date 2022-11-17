@@ -4,25 +4,25 @@ using System.Text;
 
 namespace Ex31_hint
 {
-    class Tank : Character
+    class Caw : Character
     {
         public int bullet = 0;
-        public Tank(string name, float hp, float power) : base(name, hp, power) { }
+        public Caw(string name, float hp, float power) : base(name, hp, power) { }
         public override void Attack(Character destination)
         {
-            if (bullet > 0)
+            if (hp > 5)
             {
                 bullet--;
-                Console.WriteLine($"{this.name}は{destination.name}に向け30cm砲を発射！");
-                Console.WriteLine($"{destination.name}はうしろに吹っ飛んだ！");
+                Console.WriteLine($"{this.name}は{destination.name}を角で突く！");
+                Console.WriteLine($"{destination.name}に痛恨の一撃！");
                 Console.WriteLine($"{destination.name}は{this.power}のダメージ");
                 destination.hp -= this.power;
                 Console.WriteLine($"{destination.name}の残りのHPは{destination.hp}");
             }
             else
             {
-                Console.WriteLine($"{base.name}は弾切れです！");
+                Console.WriteLine($"{base.name}は疲れ果てている！");
             }
-        }
+        }      
     }
 }
